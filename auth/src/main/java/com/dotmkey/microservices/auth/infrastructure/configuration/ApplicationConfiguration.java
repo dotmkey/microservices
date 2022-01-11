@@ -3,6 +3,7 @@ package com.dotmkey.microservices.auth.infrastructure.configuration;
 import com.dotmkey.microservices.auth.domain.model.PasswordHasher;
 import com.dotmkey.microservices.auth.domain.model.email.EmailAccountActivationPolicy;
 import com.dotmkey.microservices.auth.infrastructure.configuration.properties.AppProperties;
+import com.dotmkey.microservices.auth.infrastructure.configuration.properties.RegistrationEmailNotificationProperties;
 import com.dotmkey.microservices.auth.infrastructure.security.PasswordHasherImpl;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -11,7 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
-@EnableConfigurationProperties({AppProperties.class})
+@EnableConfigurationProperties({AppProperties.class, RegistrationEmailNotificationProperties.class})
 public class ApplicationConfiguration {
     @Bean
     public PasswordEncoder passwordEncoder() {

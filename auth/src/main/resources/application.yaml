@@ -14,3 +14,8 @@ app:
     email:
       redirect-url: /redirect-url
       expiration-period: 3600
+  notification:
+    registration:
+      email:
+        subject: Registration
+        from: no-reply@dotmkey.com
