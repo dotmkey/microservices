@@ -33,8 +33,7 @@ public interface AccountRegistrationNotifier<T extends AccountActivation> {
                     "https://auth.microservices.dotmkey.com",
                     accountActivation.getRedirectUrl(),
                     accountActivation.getActivationCode(),
-                    accountActivation.getEmail()
-                );
+                    accountActivation.getEmail());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

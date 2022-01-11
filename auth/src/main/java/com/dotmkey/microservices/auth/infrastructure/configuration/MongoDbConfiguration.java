@@ -56,14 +56,10 @@ public class MongoDbConfiguration extends AbstractMongoClientConfiguration {
             List.of(
                 new ConfigurableTypeInformationMapper(Map.of(
                     EmailAccountActivation.class, "AccountActivation#" + Account.Type.EMAIL.name(),
-                    PhoneAccountActivation.class, "AccountActivation#" + Account.Type.PHONE.name()
-                )),
+                    PhoneAccountActivation.class, "AccountActivation#" + Account.Type.PHONE.name())),
                 new ConfigurableTypeInformationMapper(Map.of(
                     EmailAccount.class, "Account#" + Account.Type.EMAIL.name(),
-                    PhoneAccount.class, "Account#" + Account.Type.PHONE.name()
-                ))
-            )
-        ));
+                    PhoneAccount.class, "Account#" + Account.Type.PHONE.name())))));
         return super.mongoTemplate(databaseFactory, converter);
     }
 }

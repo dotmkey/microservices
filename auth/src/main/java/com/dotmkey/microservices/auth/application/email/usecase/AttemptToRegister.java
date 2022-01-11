@@ -1,7 +1,6 @@
 package com.dotmkey.microservices.auth.application.email.usecase;
 
 import com.dotmkey.microservices.auth.application.AccountRegistrationNotifier;
-import com.dotmkey.microservices.auth.domain.model.AccountActivation;
 import com.dotmkey.microservices.auth.domain.model.email.EmailAccountActivation;
 import com.dotmkey.microservices.auth.domain.model.email.EmailAuthService;
 import lombok.AllArgsConstructor;

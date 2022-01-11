@@ -52,8 +52,8 @@ public class UserEventsListener extends AbstractMongoEventListener<User> {
             if (d.containsKey("password_hash") && d.containsKey("password_hash_algorithm")) {
                 d.put(
                     "password",
-                    new Document(Map.of("hash", d.get("password_hash"), "algorithm", d.get("password_hash_algorithm")))
-                );
+                    new Document(
+                        Map.of("hash", d.get("password_hash"), "algorithm", d.get("password_hash_algorithm"))));
                 d.remove("password_hash");
                 d.remove("password_hash_algorithm");
             }
