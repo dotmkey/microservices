@@ -1,0 +1,16 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://user:password@localhost:27017/auth?authSource=admin
+  mail:
+    host: localhost
+    port: 2525
+    username: user
+    password: password
+app:
+  password-policy:
+    algorithm: BCRYPT
+  account-activation-policy:
+    email:
+      redirect-url: /redirect-url
+      expiration-period: 3600

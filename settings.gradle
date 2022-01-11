@@ -1,0 +1,5 @@
+rootProject.name = 'microservices'
+include 'auth'
+include 'bank'
+include 'commons'
+
