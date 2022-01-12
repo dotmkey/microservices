@@ -12,7 +12,7 @@ app:
     algorithm: BCRYPT
   account-activation-policy:
     email:
-      redirect-url: /redirect-url
+      redirect-url: https://front-host.com/redirect-url
       expiration-period: 3600
   notification:
     registration:

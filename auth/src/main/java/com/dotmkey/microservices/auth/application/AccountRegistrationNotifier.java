@@ -30,7 +30,6 @@ public interface AccountRegistrationNotifier<T extends AccountActivation> {
                 return String.format(
                     FileCopyUtils.copyToString(
                         new InputStreamReader(this.resource.getInputStream(), StandardCharsets.UTF_8)),
-                    "https://auth.microservices.dotmkey.com",
                     accountActivation.getRedirectUrl(),
                     accountActivation.getActivationCode(),
                     accountActivation.getEmail());
